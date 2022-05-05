@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NihatOzdemir Term Project</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        #countdown {height: 600px; display:flex ; font-size: 100px; justify-content: center; align-items: center; color: white; background-color: black; margin: 0 auto;}
+        body { background-color: black;}
+        .game { width: 400px; display: none; background-color: white; flex-direction: column; margin: 0 auto; position: relative;}
+        #top { display: flex; justify-content: space-between; margin-top: 50px;}
+        #top div { justify-content: center;}
+        #top div p { text-align: center;}
+        #hi-score { font-size: 60px; color: black;}
+        #score { font-size: 100px; color: green;}
+        #time { font-size: 60px; color: red;}
+        table { width: 400px; height: 400px; border: 1px solid gray; border-collapse: collapse; position: relative;}
+        td { width: 100px; height: 100px; border: 1px solid gray; text-align: center;}
+        #middle { display: flex; flex-direction: column; align-items: center;}
+        #pointBar { background: rgb(42, 0, 156); width: 250px; height: 20px; margin-top: 20px;}
+        #pointBar2 { background-color: rgb(89, 189, 255); width: 250px; height: 20px;}
+        #again { font-size: 25px; margin-top: 10px;}
+        #timeup { display: none;}
+        #hi { display: none;}
+        .prompt { font-family: 'Licorice', cursive; font-size: 60px; color: red; position: absolute; z-index: 1; margin-top: 100px; }
+        .clickScores { color: green;}
+    </style>
+
+    <script src="jquery-3.6.0.js"></script>
+    <script src="project.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="countdown">3</div>
+    <div class="game">
+        <div id ="top">
+            <div>
+                <h3>HI-SCORE</h4>
+                <p id="hi-score">0</p>
+            </div>
+            <div>
+                <h3>SCORE</h4>
+                <p id="score">0</p>
+            </div>
+            <div>
+                <h3>TIME</h4>
+                <p id="time">13</p>
+            </div>
+        </div>
+        <div id="middle">
+            <table>
+                <p class="prompt" id="first">Tap the black tiles!</p>
+                <p class="prompt" id="timeup">Time is up!</p>
+                <p class="prompt" id="hi">New High Score!</p>
+                <tr>
+                    <td id="0"></td>
+                    <td id="1"></td>
+                    <td id="2"></td>
+                    <td id="3"></td>
+                </tr>
+                <tr>
+                    <td id="4"></td>
+                    <td id="5"></td>
+                    <td id="6"></td>
+                    <td id="7"></td>
+                </tr>
+                <tr>
+                    <td id="8"></td>
+                    <td id="9"></td>
+                    <td id="10"></td>
+                    <td id="11"></td>
+                </tr>
+                <tr>
+                    <td id="12"></td>
+                    <td id="13"></td>
+                    <td id="14"></td>
+                    <td id="15"></td>
+                </tr>
+            </table>
+            <div id="pointBar">
+                <div id="pointBar2"></div>
+            </div>
+            <p id="again">F5 to play again!</p>
+        </div>
+    </div>
+</body>
+</html>
